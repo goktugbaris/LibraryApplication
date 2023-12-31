@@ -1,0 +1,17 @@
+F:\LibraryApplication\Library.Service\bin\Debug\net7.0\Library.Service.deps.json
+F:\LibraryApplication\Library.Service\bin\Debug\net7.0\Library.Service.dll
+F:\LibraryApplication\Library.Service\bin\Debug\net7.0\Library.Service.pdb
+F:\LibraryApplication\Library.Service\bin\Debug\net7.0\Library.Core.dll
+F:\LibraryApplication\Library.Service\bin\Debug\net7.0\Library.Repository.dll
+F:\LibraryApplication\Library.Service\bin\Debug\net7.0\Library.Repository.pdb
+F:\LibraryApplication\Library.Service\bin\Debug\net7.0\Library.Core.pdb
+F:\LibraryApplication\Library.Service\obj\Debug\net7.0\Library.Service.csproj.AssemblyReference.cache
+F:\LibraryApplication\Library.Service\obj\Debug\net7.0\Library.Service.GeneratedMSBuildEditorConfig.editorconfig
+F:\LibraryApplication\Library.Service\obj\Debug\net7.0\Library.Service.AssemblyInfoInputs.cache
+F:\LibraryApplication\Library.Service\obj\Debug\net7.0\Library.Service.AssemblyInfo.cs
+F:\LibraryApplication\Library.Service\obj\Debug\net7.0\Library.Service.csproj.CoreCompileInputs.cache
+F:\LibraryApplication\Library.Service\obj\Debug\net7.0\Library.Service.csproj.CopyComplete
+F:\LibraryApplication\Library.Service\obj\Debug\net7.0\Library.Service.dll
+F:\LibraryApplication\Library.Service\obj\Debug\net7.0\refint\Library.Service.dll
+F:\LibraryApplication\Library.Service\obj\Debug\net7.0\Library.Service.pdb
+F:\LibraryApplication\Library.Service\obj\Debug\net7.0\ref\Library.Service.dll

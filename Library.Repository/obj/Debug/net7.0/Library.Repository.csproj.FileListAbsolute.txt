@@ -1,0 +1,17 @@
+F:\LibraryApplication\Library.Repository\bin\Debug\net7.0\Library.Repository.deps.json
+F:\LibraryApplication\Library.Repository\bin\Debug\net7.0\Library.Repository.runtimeconfig.json
+F:\LibraryApplication\Library.Repository\bin\Debug\net7.0\Library.Repository.dll
+F:\LibraryApplication\Library.Repository\bin\Debug\net7.0\Library.Repository.pdb
+F:\LibraryApplication\Library.Repository\bin\Debug\net7.0\Library.Core.dll
+F:\LibraryApplication\Library.Repository\bin\Debug\net7.0\Library.Core.pdb
+F:\LibraryApplication\Library.Repository\obj\Debug\net7.0\Library.Repository.csproj.AssemblyReference.cache
+F:\LibraryApplication\Library.Repository\obj\Debug\net7.0\Library.Repository.GeneratedMSBuildEditorConfig.editorconfig
+F:\LibraryApplication\Library.Repository\obj\Debug\net7.0\Library.Repository.AssemblyInfoInputs.cache
+F:\LibraryApplication\Library.Repository\obj\Debug\net7.0\Library.Repository.AssemblyInfo.cs
+F:\LibraryApplication\Library.Repository\obj\Debug\net7.0\Library.Repository.csproj.CoreCompileInputs.cache
+F:\LibraryApplication\Library.Repository\obj\Debug\net7.0\Library.Repository.csproj.CopyComplete
+F:\LibraryApplication\Library.Repository\obj\Debug\net7.0\Library.Repository.dll
+F:\LibraryApplication\Library.Repository\obj\Debug\net7.0\refint\Library.Repository.dll
+F:\LibraryApplication\Library.Repository\obj\Debug\net7.0\Library.Repository.pdb
+F:\LibraryApplication\Library.Repository\obj\Debug\net7.0\Library.Repository.genruntimeconfig.cache
+F:\LibraryApplication\Library.Repository\obj\Debug\net7.0\ref\Library.Repository.dll

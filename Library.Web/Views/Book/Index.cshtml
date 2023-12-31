@@ -1,0 +1,140 @@
+﻿@model BookListViewModel
+
+<section>
+    <div class="container mt-4">
+        <div id="alertSection" class="mt-2"></div>
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                Kitaplar
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newBookModal">
+                    Yeni
+                </button>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Kitap Adı</th>
+                            <th scope="col">Yazar Adı</th>
+                            <th scope="col">Kütüphanede</th>
+                            <th scope="col">Ödünç Alan İsim</th>
+                            <th scope="col">Ödünç Alan Soyisim</th>
+                            <th scope="col">Geri Getireceği Tarih</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var book in Model.PaginatedBooks)
+                        {
+                            <tr>
+                                <th scope="row"><a href="/Book/GetDetail/@book.Id"><i class="fa-solid fa-magnifying-glass"></i></a></th>
+                                <td>@book.Name</td>
+                                <td>@book.Author</td>
+                                <td>
+                                    @if (book.inLibrary)
+                                    {
+                                        <form method="post" action="/Book/LendABookView/@book.Id" class="lend-form">
+                                            <input type="hidden" name="BookId" value="@book.Id" />
+                                            <button type="submit" class="btn btn-success">Ödünç Al</button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <button type="button" class="btn btn-success" disabled>Ödünç Alındı</button>
+                                    }
+                                </td>
+                                <td>
+                                    @if (book.BookLogs.Any())
+                                    {
+                                        @book.BookLogs.Last().FirstName
+                                    }
+                                </td>
+                                <td>
+                                    @if (book.BookLogs.Any())
+                                    {
+                                        @book.BookLogs.Last().LastName
+                                    }
+                                </td>
+                                @if (book.ReturnedDate.HasValue)
+                                {
+                                    <td>@book.ReturnedDate.Value.ToString("dd-MM-yyyy")</td>
+                                }else{
+                                    <td></td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-flex justify-content-center">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        @for (int i = 1; i <= Model.TotalPages; i++)
+                        {
+                            <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                                <a class="page-link" href="?pageIndex=@i&pageSize=@Model.PageSize">@i</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="newBookModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Yeni Kitap</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="/Book/AddBook" id="newBookModalForm" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="bookName" class="form-label">Kitap Adı</label>
+                            <input type="text" class="form-control" id="bookName" name="Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="bookAuthor" class="form-label">Yazar Adı</label>
+                            <input type="text" class="form-control" id="bookAuthor" name="Author">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Kitap Resmi</label>
+                            <input class="form-control" type="file" id="formFile" placeholder="Choose a file" name="bookImage">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="inLibrary" name="inLibrary" value="true">
+                            <label class="form-check-label" for="inLibrary">Kütüphanede</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts {
+    <script>
+        function showAlert(message, alertType) {
+            var alertSection = $("#alertSection");
+            alertSection.empty();
+
+            var alertDiv = $("<div class='alert alert-" + alertType + "' role='alert'>" + message + "</div>");
+            alertSection.append(alertDiv);
+        }
+
+        $(document).ready(function () {
+            var errorMessages = @Json.Serialize(TempData["ErrorMessages"]);
+
+            if (errorMessages && errorMessages.length > 0) {
+                showAlert(errorMessages.join("<br>"), "danger");
+            }
+        });
+    </script>
+}
+
+
+
+
+

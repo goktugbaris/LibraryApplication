@@ -1,0 +1,37 @@
+﻿@model Book
+
+<div class="container">
+    <div class="card mt-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            Kitabı Ödünç Al
+        </div>
+        <div class="card-body">
+            <div>
+                <form method="post" action="/Book/LendABook" id="lendABookModalForm">
+                    <input type="hidden" name="BookId" value="@Model.Id" />
+                    <div class="mb-3">
+                        <label class="form-label">Kitap Adı</label>
+                        <input class="form-control" type="text" value=@Model.Name aria-label="Disabled input example" disabled readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Yazar Adı</label>
+                        <input class="form-control" type="text" value=@Model.Author aria-label="Disabled input example" disabled readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Alan İsim</label>
+                        <input class="form-control" type="text" name="FirstName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Alan Soyisim</label>
+                        <input class="form-control" type="text" name="LastName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Geri Getireceği Tarih</label>
+                        <input class="form-control" type="date" name="CreatedOn" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
