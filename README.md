@@ -7,8 +7,9 @@ Bu proje, bir kütüphanede bulunan kitapların takibi ve ödünç verilmesini s
 1. Projeyi bilgisayarınıza klonlayın:
 
     ```bash
+    mkdir library-application
     git clone https://github.com/goktugbaris/LibraryApplication.git
-    cd kutuphane-uygulamasi
+    cd library-application
     ```
 
 2. PostgreSQL veritabanını yükleyin ve bağlantı ayarlarını `appsettings.json` dosyasında güncelleyin.
