@@ -27,7 +27,7 @@ namespace Library.Web.Controllers
             _bookLogService = bookLogService;
         }
 
-        public IActionResult Index(int pageIndex = 1, int pageSize = 5)
+        public IActionResult Index(int pageIndex = 1, int pageSize = 15)
         {
             try
             {
