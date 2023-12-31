@@ -246,3 +246,4 @@ F:\LibraryApplication\Library.Web\obj\Debug\net7.0\refint\Library.Web.dll
 F:\LibraryApplication\Library.Web\obj\Debug\net7.0\Library.Web.pdb
 F:\LibraryApplication\Library.Web\obj\Debug\net7.0\Library.Web.genruntimeconfig.cache
 F:\LibraryApplication\Library.Web\obj\Debug\net7.0\ref\Library.Web.dll
+F:\LibraryApplication\Library.Web\obj\Debug\net7.0\Library.Web.sourcelink.json
